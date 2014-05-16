@@ -19,6 +19,8 @@ module Dest
     end
   end
 
+  # Should dry these two methods up a bit. 
+
   def self.test_single(file_path)
     start_time = Time.now
     Loader.single_file(file_path)
@@ -31,7 +33,7 @@ module Dest
 
   def self.test_directory(dir_path)
     start_time = Time.now
-    filepaths = Dir.glob("#{dir_path}**/.rb")
+    filepaths = Dir.glob("#{dir_path}**/*.rb")
     Loader.multiple_files(filepaths)
 
     filepaths.each do |path| 
