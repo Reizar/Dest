@@ -15,15 +15,15 @@ module Dest
     #   :values => [ [1, 'sum(5, 5)', '10'] ]  ( Array of Arrays. [ line_number, expression, result])
     # }
     def parse
-      parsed_output = { :filename => @filename, :values => [] }
+      parsed_output = []
 
       File.open(@filename).each_line.with_index do |line, num|
         next if line.lstrip[0] != "#"
 
         if expr = line.match(EXPRESSION)
-          parsed_output[:values].push [num, expr["expression"]]
+          parsed_output.push [num, expr["expression"]]
         elsif result = line.match(RESULT)
-          parsed_output[:values].last.push(result["result"])
+          parsed_output.last.push(result["result"])
         end
       end
       parsed_output
