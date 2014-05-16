@@ -4,7 +4,7 @@ module Dest
 
   class Formatter
 
-    @@fail_count = 1
+    @@fail_count = 0
 
     def initialize(evald_result)
       @evald_result = evald_result
@@ -14,10 +14,15 @@ module Dest
       if @evald_result[:result][0]
         print_passing_test
       else
-        print_failing_test
         @@fail_count += 1
+        print_failing_test
       end
 
+    end
+
+    def self.print_end_test_message(time_taken, total_tests)
+      puts "Finished in #{time_taken} seconds \n" + 
+           "#{total_tests} tests,".green + "#{@@fail_count} failures".red 
     end
 
     private
