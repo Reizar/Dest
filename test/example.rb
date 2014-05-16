@@ -4,7 +4,7 @@ class App
   # >> App.new.sum(5, 5)
   # => 10
   def sum(num1, num2)
-    num1 + num2
+    num1 * num2
   end
 
   # Concats two strings
@@ -12,7 +12,7 @@ class App
   # >> App.new.concat("hello", " world")
   # => "hello world"
   def concat(str1, str2)
-    str1 + str2
+    str1
   end
 
   # Calculates the factorial of a given number n
