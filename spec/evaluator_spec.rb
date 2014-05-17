@@ -1,3 +1,4 @@
+require 'rspec'
 require 'dest'
 require'./spec/class_example.rb'
 

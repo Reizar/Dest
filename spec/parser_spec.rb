@@ -1,3 +1,4 @@
+require 'rspec'
 require "dest"
 
 describe Dest::Parser do 

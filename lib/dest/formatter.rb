@@ -29,8 +29,8 @@ module Dest
     end
 
     def self.print_end_test_message(time_taken, total_tests)
-      puts "Finished in #{time_taken} seconds \n" + 
-           "#{total_tests} tests,".green + "#{@@fail_count} failures".red 
+      puts "\nFinished in #{time_taken} seconds \n" + 
+           "#{total_tests} tests,".green + " #{@@fail_count} failures".red 
     end
 
     private
