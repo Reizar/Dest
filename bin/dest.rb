@@ -19,5 +19,5 @@ if ARGV[0]
     puts "#{ARGV[0]} is not a valid file or directory"
   end
 else 
-  Dest.test_dir
+  Dest.test_directory("./")
 end
