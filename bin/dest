@@ -10,7 +10,8 @@ end
 # Do a check for rails in here.
 
 if ARGV.include?("-r")
-  `rake db:migrate`
+  load 
+  `rake dest:rails`
   exit
 end
 
