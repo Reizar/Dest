@@ -9,6 +9,11 @@ end
 
 # Do a check for rails in here.
 
+if ARGV.includes?("-r")
+  `rake db:migrate`
+  exit
+end
+
 if ARGV[0]
 
   path = File.expand_path(ARGV[0])
