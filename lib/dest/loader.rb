@@ -2,11 +2,7 @@ module Dest
 
   class Loader
 
-    def self.single_file(filepath)
-      require filepath
-    end
-
-    def self.multiple_files(filepaths) # Array of filepaths
+    def self.load_files(filepaths) # Array of filepaths
       filepaths.each { |path| require path }
     end
 
