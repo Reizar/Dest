@@ -10,13 +10,16 @@ end
 # Do a check for rails in here.
 
 if ARGV[0]
-  if File.file?(ARGV[0])
-    Dest.test_single(ARGV[0])
-  elsif File.directory?(ARGV[0])
-    dir =  ARGV[0][-1] == "/" ? ARGV[0] : "#{ARGV[0]}/"  # Add trailing slash if it isn't present
+
+  path = ARGV[0][0..1] == "./" ? ARGV[0] : "./" + ARGV[0]
+
+  if File.file?(path)
+    Dest.test_single(path)
+  elsif File.directory?(path)
+    dir =  path[-1] == "/" ? path : "#{path}/"  # Add trailing slash if it isn't present
     Dest.test_directory(dir)
   else
-    puts "#{ARGV[0]} is not a valid file or directory"
+    puts "#{path} is not a valid file or directory"
   end
 else 
   Dest.test_directory("./")
