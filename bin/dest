@@ -16,7 +16,6 @@ if ARGV[0]
   if File.file?(path)
     Dest.test_single(path)
   elsif File.directory?(path)
-    dir =  path[-1] == "/" ? path : "#{path}/"  # Add trailing slash if it isn't present
     Dest.test_directory(dir)
   else
     puts "#{path} is not a valid file or directory"

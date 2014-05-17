@@ -14,7 +14,7 @@ module Dest
   end
 
   def self.test_directory(dir_path)
-    filepaths = Dir.glob("#{dir_path}**/*.rb")
+    filepaths = Dir.glob("#{dir_path}/**/*.rb")
     self.run_tests(filepaths)
   end
 
