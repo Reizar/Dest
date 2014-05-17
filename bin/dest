@@ -16,7 +16,7 @@ if ARGV[0]
   if File.file?(path)
     Dest.test_single(path)
   elsif File.directory?(path)
-    Dest.test_directory(dir)
+    Dest.test_directory(path)
   else
     puts "#{path} is not a valid file or directory"
   end
