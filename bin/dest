@@ -10,7 +10,7 @@ end
 # Do a check for rails in here.
 
 if ARGV.include?("-r")
-  load "./tasks/rails.rake"
+  load File.expand_path("tasks/rails.rake")
   `rake dest:rails`
   exit
 end
