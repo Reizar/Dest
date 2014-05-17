@@ -9,7 +9,7 @@ end
 
 # Do a check for rails in here.
 
-if ARGV.includes?("-r")
+if ARGV.include?("-r")
   `rake db:migrate`
   exit
 end
