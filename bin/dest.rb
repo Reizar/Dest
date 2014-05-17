@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 
 begin
-  require 'dest'
+  require "dest" 
 rescue LoadError
-  require 'rubygems'
-  require 'dest'
+  puts "Could not load 'dest'" 
+  exit
 end
 
 # Do a check for rails in here.
