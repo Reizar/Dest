@@ -10,7 +10,7 @@ end
 # Do a check for rails in here.
 
 if ARGV.include?("-r")
-  load 
+  load "./tasks/rails.rake"
   `rake dest:rails`
   exit
 end

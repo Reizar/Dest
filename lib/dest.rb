@@ -3,7 +3,6 @@ require "dest/parser"
 require "dest/evaluator"
 require "dest/formatter"
 require "dest/loader"
-load "tasks/rails.rake"
 
 module Dest
 
