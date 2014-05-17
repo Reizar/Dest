@@ -1,5 +1,5 @@
 require 'dest'
-require 'class_example'
+require'./spec/class_example.rb'
 
 describe Dest::Evaluator do 
 
