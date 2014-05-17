@@ -11,7 +11,7 @@ end
 
 if ARGV[0]
 
-  path = ARGV[0][0..1] == "./" ? ARGV[0] : "./" + ARGV[0]
+  path = File.expand_path(ARGV[0])
 
   if File.file?(path)
     Dest.test_single(path)
