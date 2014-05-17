@@ -28,8 +28,8 @@ Or install it yourself as:
 
 To use Dest, have commented documentation above your method that has the following two lines:
 
-  # >> expression
-  # => expected_result
+    # >> expression
+    # => expected_result
 
 The => line must be immediately after the >> line. There can be any amount of spaces before or after the #
 
