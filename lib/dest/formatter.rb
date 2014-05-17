@@ -1,5 +1,13 @@
 require 'colorize'
 
+# The Formatter is responsible for printing the results to the user.
+# At this time it simply prints to the terminal. 
+# In future versions there may be options to specify where to print to.
+# Passing tests are represented with a dot (.)
+# Failing tests will print out what line the doctest is on,
+# the expression, what was expected and what the expression 
+# actually evaluated to.
+
 module Dest
 
   class Formatter
@@ -26,6 +34,8 @@ module Dest
     end
 
     private
+      # Explicitly call Kernel as theres a name conflict
+      # with my Formatter.print method
       def print_passing_test
         Kernel.print ".".green
       end

@@ -1,9 +1,16 @@
+# The Parser's responsibility is to parse a given .rb file
+# for any doctests. 
+# Doctests are identified by a line that starts with a comment (#)
+# And then follows with a >>, which provides an expression.
+# The next line MUST be a => which provides the expected result.
+
+
 module Dest
 
   class Parser
 
-    EXPRESSION = /\s*#\s*>>\s*(?<expression>.*)/ # Matches the beginning of an expression
-    RESULT     = /\s*#\s*=>\s*(?<result>.*)/ # Matches the beginning of a result
+    EXPRESSION = /\s*#\s*>>\s*(?<expression>.*)/ # Provides a match group for the expression.
+    RESULT     = /\s*#\s*=>\s*(?<result>.*)/     # Provides a match group for the result. 
 
     def initialize(filename)
       @filename = filename
