@@ -14,4 +14,10 @@ describe Dest::Evaluator do
 
     Dest::Evaluator.new(doctest).evaluate.first.should == false
   end
+
+  it "should raise an error if a non contextd class is referenced" do 
+    doctest = [7, "SomeClass.new(\"Aaron\").say_hello", "\"Hello DifferName\""]
+
+    expect { Dest::Evaluator.new(doctest).evaluate }.to raise_error
+  end
 end
