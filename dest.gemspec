@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["me@aaronrama.com"]
   spec.summary       = "A ruby doctest library"
   spec.description   = "A ruby doctest library that allows you to write simple tests in your codes documentation."
-  spec.homepage      = "https://github.com/Reizar/dest"
+  spec.homepage      = "https://github.com/Reizar/Dest"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
